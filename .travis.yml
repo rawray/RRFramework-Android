@@ -1,0 +1,24 @@
+language: android   # 声明构建语言环境
+
+notifications:      # 每次构建的时候是否通知，如果不想收到通知邮箱（个人感觉邮件贼烦），那就设置false吧
+  email: true
+
+sudo: false         # 开启基于容器的Travis CI任务，让编译效率更高。
+
+android:            # 配置信息
+  components:
+    - tools
+    - build-tools-25.0.1
+    - android-25
+    - extra-android-m2repository     # Android Support Repository
+    - extra-android-support          # Support Library
+
+before_install:
+ - chmod +x gradlew  # 改变gradlew的访问权限
+
+script:              # 执行:下面的命令
+  - ./gradlew assembleRelease
+
+before_deploy:       # 部署之前
+  # 使用 mv 命令进行修改apk文件的名字
+  - mv app/build/outputs/apk/app-release.apk app/build/outputs/apk/buf.apk
