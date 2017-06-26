@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_loading"
+        android:title="show loading"/>
+
+    <item
+        android:id="@+id/item_error"
+        android:title="show error"/>
+
+    <item
+        android:id="@+id/item_network_error"
+        android:title="show networkEror"/>
+
+    <item
+        android:id="@+id/item_empty_data"
+        android:title="show emptyData"/>
+
+    <item
+        android:id="@+id/item_content"
+        android:title="show content"/>
+
+</menu>

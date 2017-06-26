@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="36sp"
+            android:text="RRFramwork"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_margin="10dp"
+            android:lines="5"
+            android:lineSpacingExtra="3dp"
+            android:text="努力打造一个好用的Android应用架构\n模块化，与业务耦合度低，快速开发属于自己的APP\n有兴趣有能力的一起来呀！\nGithub：https://github.com/rawray/RRFramework-Android"/>
+
+</LinearLayout>

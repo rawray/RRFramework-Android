@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerview" type="id" />
+    <item name="refresh_header_view" type="id" />
+    <item name="refresh_footer_view" type="id" />
+    <item name="refresh_scroll_view" type="id" />
+</resources>

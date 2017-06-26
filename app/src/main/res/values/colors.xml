@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary1">#53b4df</color>
+    <color name="primary2">#2fa4d9</color>
+    <color name="primary3">#1c9cd6</color>
+    <color name="primary4">#2d8db8</color>
+    <color name="primary5">#1d7ca7</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray1">#cccccc</color>
+    <color name="gray2">#999999</color>
+    <color name="gray3">#666666</color>
+    <color name="gray4">#444444</color>
+    <color name="gray5">#333333</color>
+    <color name="gray6">#222222</color>
+    <color name="black">#000000</color>
+
+</resources>

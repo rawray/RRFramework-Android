@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RRFramework</string>
+    <string name="activity_test_status_title">多状态切换</string>
+</resources>
