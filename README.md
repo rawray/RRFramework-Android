@@ -1,6 +1,8 @@
 #RRFramework
 - 一个Android应用开发框架。特点：可读性好，扩展性高，易用性强。
 
+[![Build Status](https://travis-ci.org/rawray/RRFramework-Android.svg?branch=master)](https://travis-ci.org/rawray/RRFramework-Android)
+
 ##设计思路
 - 采用MVVM设计主体框架(Model, View, ViewModel)，通用代码写在框架中，业务和变化部分剥离。
 - 横向分模块（ui, common, entity, utils, notification, business, database, network ...)
