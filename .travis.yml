@@ -14,10 +14,7 @@ android:            # 配置信息
     - extra-android-support          # Support Library
 
 before_install:
- - chmod +x gradlew  # 改变gradlew的访问权限
-
-script:              # 执行:下面的命令
-  - ./gradlew assembleRelease
+  - chmod +x gradlew  # 改变gradlew的访问权限
 
 before_deploy:       # 部署之前
   # 使用 mv 命令进行修改apk文件的名字
