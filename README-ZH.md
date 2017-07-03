@@ -1,62 +1,60 @@
 # RRFramework
 
-- This is a framework for Android APP development. It has the following features:
-  Readable
-  Scalability
-  Easy to use
-  Welcome to join us together to polish it if you have some ideas!
+- 一个Android应用开发框架。特点：可读性好，扩展性高，易用性强。
+  希望有想法有能力一起来设计开发！
 
-# Table of contents
+# 目录
 
-- [Status](#Status)
-- [Project structure](#Project-structure)
-- [Coding Styles](#Coding-Styles)
-- [Community](#Community)
-- [Copyright and license](#Copyright-and-license)
+- [编译状态](#Status)
+- [项目架构](#Project-structure)
+- [代码规范](#Coding-Styles)
+- [联系我们](#Community)
+- [版权信息](#Copyright-and-license)
 
-# Status
+# 编译状态
 
 [![Build Status](https://travis-ci.org/rawray/RRFramework-Android.svg?branch=master)](https://travis-ci.org/rawray/RRFramework-Android)
 
 
-# Project structure
+# 项目架构
 
-## Take MVVM to design the main frame, the universal code has been included into this frame,  business and changes has been Stripped
-- Transverse dividers （UI, Service, Business, Model, Uitls, IO, Vendor...)
-- Vertical stratification （Interface layer， Abstract layer, Base layer, Implement layer）
+## 采用MVVM设计主体框架，通用代码写在框架中，业务和变化部分剥离。
+- 横向分模块（UI, Service, Business, Model, Uitls, IO, Vendor...)
+- 纵向分层次（interface layer， abstract layer, base layer, implement layer）
 
 ## UI
-- Activity/Fragemnt vertical stratification
-- Activity/Fragment status switch support（Loading, Content, Empty data, Network error, Other error）
-- Pull refresh and loadmore support （Swipe， Custom）
+- Activity/Fragemnt业务分层封装，类图在doc目录下
+- Activity/Fragment支持状态切换（加载页，内容页，空白页，网络错误页，其它错误页）
+- 两套列表下拉刷新方案（Swipe，Custom）
+- RecyclerView支持LoadMore，LoadMore支持手动和自动加载两种
 
 ## Service
-Pure service, it has nothing to do with business
-- Management of data
-- Management of processes and thread
-- Thread queue management
-- Event bus
+纯服务，业务无关
+- 数据管理
+- 进程线程管理
+- 线程队列管理
+- 事件总线
 
 ## Business
-Universal Business
-- Sign up & Log in
-- Share
-- Data reporting
-- New version update
+通用业务
+- 注册登录
+- 分享
+- 数据上报
+- 版本更新
  
 ## Model
-Data Model
+数据模型
 
 ## IO
-Data of CRUD
-- Adapter
-- Cache(Memory, File)
-- File
-- Database
-- Network
+数据的增删查改
+- 适配层Adapter
+- 缓存（包括内存，文件）Cache
+- 文件File
+- 数据库Database
+- 网络Network
 
-# Coding Styles
-- Use dividing line to distinguish Java code and pls follow the order of queue
+# 代码规范
+- Java类使用分隔线对代码进行分块，建议按以下顺序排列：
 ```java
     //----------------------- Absolute Methed ---------------------------------
 
@@ -70,7 +68,7 @@ Data of CRUD
 
     //----------------------- Private Methed ----------------------------------
 ```    
-- Override method from base class to implement class, for example:
+- 子类实现部分按从上到下进行分块实现，例如：
 ```java
     //----------------------- AbsFragment -------------------------------------
     @Override
@@ -109,19 +107,19 @@ Data of CRUD
 ```
 
 
-# Community
-Get updates on RRFramework's development and subscribe personal blog on wechat.
+# 联系我们
+获取最新的开发进展情况，请关注Github开发项目和订阅我们的微信公众号。
 
-## Personal blog on wechat
-- Search "RRFramework" in personal blog on wechat
-- scan the qrcode below to subscribe
+## 微信公众号
+- 可在微信公众号搜索 "RRFramework"
+- 可扫描下方二维码，进行关注
 
-![qrcode of personal blog on wechat](./doc/images/qrcode_for_wechat.jpg)
+![微信公众号二维码](./doc/images/qrcode_for_wechat.jpg)
 
-## Homepage & Email
+## 个人主页 & 邮箱
 - http://www.rawray.com & du_guo@sina.com
 
 
-# Copyright and license
+# 版权信息
 
 Code released under the [MIT License]
