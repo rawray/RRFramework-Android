@@ -3,6 +3,7 @@
     package="com.rawray.rrframework">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <service android:name="com.rawray.rrframework.service.network.NetworkStateService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.rawray.rrframework.service.network.NetworkStateService" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait">

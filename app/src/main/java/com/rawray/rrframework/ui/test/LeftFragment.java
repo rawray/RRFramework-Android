@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.rawray.rrframework.R;
 import com.rawray.rrframework.ui.common.base.fragment.AbsStatusFragment;
+import com.rawray.rrframework.utils.NetworkUtils;
 import com.rawray.rrframework.vendor.statuslayout.StatusLayoutManager;
 
 import java.util.concurrent.Callable;
@@ -64,6 +65,12 @@ public class LeftFragment extends AbsStatusFragment {
 
     //----------------------- Private Methed ----------------------------------
     private void loadData() {
+
+        if (!NetworkUtils.avaliable()) {
+            showNetworkError();
+            return;
+        }
+
         Flowable.fromCallable(new Callable<String>() {
             @Override
             public String call() throws Exception {

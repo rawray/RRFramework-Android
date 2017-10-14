@@ -1,12 +1,16 @@
 package com.rawray.rrframework.ui.main;
 
 import android.content.Intent;
+import android.net.Network;
 import android.os.Bundle;
 
 import com.rawray.rrframework.R;
+import com.rawray.rrframework.service.network.NetworkStateService;
+import com.rawray.rrframework.service.network.NetworkStatus;
 import com.rawray.rrframework.ui.common.base.activity.AbsStatusActivity;
 import com.rawray.rrframework.ui.test.TestMultiFragmentActivity;
 import com.rawray.rrframework.ui.test.TestStatusActivity;
+import com.rawray.rrframework.utils.NetworkUtils;
 import com.rawray.rrframework.vendor.statuslayout.StatusLayoutManager;
 
 import java.util.concurrent.Callable;
@@ -48,8 +52,13 @@ public class MainActivity extends AbsStatusActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
+        startService();
         initView();
         loadData();
+    }
+
+    private void startService() {
+        startService(new Intent(getApplicationContext(), NetworkStateService.class));
     }
 
     //----------------------- Private Methed ----------------------------------
@@ -59,6 +68,12 @@ public class MainActivity extends AbsStatusActivity {
     }
 
     private void loadData() {
+
+        if (!NetworkUtils.avaliable()) {
+            showNetworkError();
+            return;
+        }
+
         Flowable.fromCallable(new Callable<String>() {
             @Override
             public String call() throws Exception {
